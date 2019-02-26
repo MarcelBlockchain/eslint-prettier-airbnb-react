@@ -32,4 +32,4 @@ cd myApp
 This script follows this [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a) by Jeffrey Zhen.
 
 -----
-I, Marcel Morales, replaced 'Airbnb' with 'Standard' in this package. Original can be found here [here](https://github.com/paulolramos/eslint-prettier-airbnb-react)
+I, Marcel Morales, replaced 'Airbnb' with 'Standard' in this package. Original can be found [here](https://github.com/paulolramos/eslint-prettier-airbnb-react)
