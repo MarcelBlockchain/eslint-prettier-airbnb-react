@@ -1,4 +1,4 @@
-# ESLint/Prettier & Airbnb's Style Guide for React Apps
+# ESLint/Prettier & Standards's Style Guide for React Apps
 
 **Make sure you `npm init`, or at least have a _package.json_ file before proceeding!**
 
@@ -9,7 +9,7 @@
 
 ```
 cd
-git clone https://github.com/paulolramos/eslint-prettier-airbnb-react style-config
+git clone https://github.com/MarcelBlockchain/eslint-prettier-standard-react style-config
 ```
 
 2. Navigate to your app directory where you want to include this style configuration.
@@ -30,3 +30,6 @@ cd myApp
 - .prettierrc
 
 This script follows this [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a) by Jeffrey Zhen.
+
+-----
+I, Marcel Morales, replaced 'Airbnb' with 'Standard' in this package. Original can be found here [here](https://github.com/paulolramos/eslint-prettier-airbnb-react)
