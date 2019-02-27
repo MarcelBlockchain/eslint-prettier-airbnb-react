@@ -1,5 +1,8 @@
 # ESLint/Prettier & Standards's Style Guide for React Apps
 
+This script follows this [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a) by Jeffrey Zhen, with some modifications.
+I'm open for pull requests, since this config works for me, but maybe not for all setups.
+
 **Make sure you `npm init`, or at least have a _package.json_ file before proceeding!**
 
 ## Installation
@@ -29,7 +32,33 @@ cd myApp
 - .eslintrc.json
 - .prettierrc
 
-This script follows this [tutorial](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a) by Jeffrey Zhen.
+5. append the following to your package.json
 
------
-I, Marcel Morales, replaced 'Airbnb' with 'Standard' in this package. Original can be found [here](https://github.com/paulolramos/eslint-prettier-airbnb-react)
+```
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "html"
+    ]
+  }
+```
+
+6. Install [StandardJS](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs) (from Sam Chen) & [Prettier-Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode) (from numso) extensions in VS Code. There are alternatives for other IDE's
+
+7. Append the following to your settings.json in VS Code --> CMD + ,  (then click on the {}, for code view )
+```
+  // prettify code:
+  "files.autoSave": "off",
+  "editor.formatOnSave": false, // normally 'beautifier' formatter from VS
+  "javascript.validate.enable": false,
+  "standard.enable": true,
+  "standard.run": "onType",
+  "standard.autoFixOnSave": true,
+  "standard.usePackageJson": true,
+  // "standard.options": { "parser": "babel-eslint" }, // if standard does not work, uncomment this line
+  "editor.autoIndent": false,
+  "standard.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
+```
