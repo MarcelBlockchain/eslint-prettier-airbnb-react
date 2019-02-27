@@ -37,4 +37,4 @@ echo '{
 
 echo -e "${GREEN}Done! ${NC}"
 echo -e "Make sure to install the StandardJS & Prettier-Standard Extensions in VS Code. Also append to package.json \"standard\": { \"parser\": \"babel-eslint\" }"
-echo -e "See readme on Github for more details: https://github.com/MarcelBlockchain/eslint-prettier-standard-react"
+echo -e "See readme on Github for more details, such as how to config your settings.json for linting in VS Code: https://github.com/MarcelBlockchain/eslint-prettier-standard-react"
