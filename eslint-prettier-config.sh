@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 echo -e "${GREEN}Starting Style Formatting Configuration... ${NC}"
 
 echo -e "1/5 ${LCYAN}Local ESLint & Prettier Installation... ${NC}"
-npm install -D eslint@5.6.0 prettier
+npm install -D eslint prettier standard
 
 echo -e "2/5 ${YELLOW}Standard Configuration Installation... ${NC}"
 npm install -D eslint-config-standard eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react babel-eslint
