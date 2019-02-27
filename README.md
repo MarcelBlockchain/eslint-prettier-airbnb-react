@@ -42,6 +42,12 @@ cd myApp
     ]
   }
 ```
+  and delete:
+```
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+ ```
 
 6. Install [StandardJS](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs) (from Sam Chen) & [Prettier-Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode) (from numso) extensions in VS Code. There are alternatives for other IDE's
 
