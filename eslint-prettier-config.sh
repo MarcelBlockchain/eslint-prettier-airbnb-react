@@ -7,25 +7,23 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}Starting Style Formatting Configuration... ${NC}"
 
-echo -e "1/5 ${LCYAN}Local ESLint & Prettier Installation... ${NC}"
+echo -e "1/5 ${LCYAN}Local ESLint & Prettier & Standard Installation... ${NC}"
 npm install -D eslint prettier standard
 
 echo -e "2/5 ${YELLOW}Standard Configuration Installation... ${NC}"
-npm install -D eslint-config-standard eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react babel-eslint
+npm install -D eslint-config-standard eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
 
 echo -e "3/5 ${LCYAN}Disabling ESLint Formatting... ${NC}"
-npm install -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-flowtype@2.50.3 eslint-config-react-app eslint-config-standard
+npm install -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-flowtype eslint-config-react-app eslint-plugin-html
 
 echo -e "4/5 ${YELLOW}Creating ESLint JSON... ${NC}"
 touch .eslintrc.json
 
 echo '{
-  "extends": ["standard", "prettier", "react-app", "plugin:prettier/recommended"],
-  "plugins": ["prettier", "standard"],
+  "extends": ["standard", "prettier", "plugin:jsx-a11y/recommended", "plugin:react/recommended"],
+  "plugins": ["prettier", "standard", "jsx-a11y", "react", "flowtype", "html"],
   "rules": {
-    "prettier/prettier": ["error"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "jsx-a11y/href-no-hash": [0]
+    "jsx-a11y/rule-name": 2
   }
 }' >> .eslintrc.json
 
@@ -38,4 +36,5 @@ echo '{
 }' >> .prettierrc
 
 echo -e "${GREEN}Done! ${NC}"
-
+echo -e "Make sure to install the StandardJS & Prettier-Standard Extensions in VS Code. Also append to package.json \"standard\": { \"parser\": \"babel-eslint\" }"
+echo -e "See readme on Github for more details: https://github.com/MarcelBlockchain/eslint-prettier-standard-react"
